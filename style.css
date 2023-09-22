@@ -1,0 +1,82 @@
+.carousel-container {
+    position: relative;
+    width: 100%; 
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* 0 btn,pr,nx added */
+.carousel-button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-item:hover .carousel-overlay {
+    opacity: 1;
+} 
+
+.carousel-overlay h1,
+.carousel-overlay p,
+.carousel-overlay button {
+    margin: 10px 0;
+}
+
+
+/* liner gradient */
+
+.liner-gradient-2{
+    background: linear-gradient(rgba(0,0,0,0.7)) rgba(0, 0, 0, 0.5) url(images/banner1.png); 
+    height: 690px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
